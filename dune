@@ -2,11 +2,11 @@
  (name mdx_rule_test))
 
 (rule
-  (target bar.t)
+  (target generated.md)
   (action
     (progn
       (write-file i-ran "truly this was executed")
-      (write-file bar.t ""))))
+      (write-file generated.md ""))))
 
 (mdx
-  (files foo.t bar.t))
+  (files exists.md generated.md missing.md))
