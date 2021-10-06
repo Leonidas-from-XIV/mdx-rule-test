@@ -1,0 +1,5 @@
+(library
+ (name mdx_rule_test))
+
+(mdx
+  (files foo.t))
