@@ -1,5 +1,12 @@
 (library
  (name mdx_rule_test))
 
+(rule
+  (target bar.t)
+  (action
+    (progn
+      (write-file i-ran "truly this was executed")
+      (write-file bar.t ""))))
+
 (mdx
-  (files foo.t))
+  (files foo.t bar.t))
